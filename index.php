@@ -1,7 +1,11 @@
 <?php 
-    $links = array("The Apache Web Server" => "www.apache.org", "Apress" => "www.apress.com", "The PHP Scripting Language" => "www.php.net");
-    echo "<b>Online Resources</b>:<br>";
-    foreach ($links as $title => $link) {
-        echo "<a href=\"http://$link\">$title</a><br>";
-    }
+<?php
+$linecount = 1;
+$fh = fopen("sports.txt", "r");
+while (!feof($fh) && $linecount <= 5) {
+    $line = fgets($fh, 4094);
+    echo $line. "<br>";
+    $linecount++;
+}
+?>
 ?> 
