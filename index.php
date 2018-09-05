@@ -1,7 +1,9 @@
 <?php 
-    $count = 1;
-    while ($count < 5) {
-        printf("%d squared = %d <br>", $count, pow($count, 2));
-        $count ++;
+    $linecount = 1;
+    $fh = fopen("sports.txt", "r");
+    while (!feof($th) && $linecount <= 5) {
+        $line = fgets($fh, 4094);
+        echo $line. "<br>";
+        $linecount++;
     }
-?>
+?> 
