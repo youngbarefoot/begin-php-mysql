@@ -1,6 +1,7 @@
 <?php 
-    $count = 11;
-    do {
-        printf("%d squared = %d <br>", $count, pow($count, 2));
-    } while ($count < 10);
+    $links = array("www.apress.com", "www.php.net", "www.apache.org");
+    echo "<b>Online Resources</b>:<br>";
+    foreach ($links as $link) {
+        echo "<a href=\"http://$link\">$link</a><br>";
+    }
 ?> 
