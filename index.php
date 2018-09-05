@@ -1,9 +1,8 @@
 <?php
-    $linecount = 1;
-    $fh = fopen("sports.txt", "r");
-    while (!feof($fh) && $linecount <= 5) {
-        $line = fgets($fh, 4094);
-        echo $line. "<br>";
-        $linecount++;
+    $usernames = array("Grace", "Doris", "Gary", "Nate", "missing", "Tom");
+    for ($x = 0; $x < count($usernames); $x++) {
+        if ($usernames[$x] == "missing") continue;
+        printf("Staff member: %s <br>", $usernames[$x]);
+        
     }
 ?>
